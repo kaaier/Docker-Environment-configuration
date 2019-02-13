@@ -68,9 +68,18 @@ $ sudo docker run hello-world
 
 
 Docker-nvidia的安装
-https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)
+1.https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)
 docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
 sudo apt-get purge nvidia-docker
 
 sudo apt-get install nvidia-docker2
 sudo pkill -SIGHUP dockerd
+
+2.
+# Install nvidia-docker and nvidia-docker-plugin
+wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
+sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
+ 
+# Test nvidia-smi 验证是否安装成功
+nvidia-docker run --rm nvidia/cuda nvidia-smi
+
