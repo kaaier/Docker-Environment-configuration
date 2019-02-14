@@ -1,3 +1,5 @@
+docker是一种容器区别于虚拟机，使用docker你可以打包、发布、运行任何应用程序，如果你经常碰到开发环境与生产环境不一致，或者经常需要配置复杂的环境，
+那你就可以考虑使用它，“它是一处打包到处运行“。
 docker权限：
 sudo groupadd docker
 sudo gpasswd -a ${USER} docker
