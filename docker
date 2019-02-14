@@ -87,3 +87,12 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 1.设置中国官方镜像加速：https://www.docker-cn.com/registry-mirror
 2.下载nvidia cuda中的镜像
 docker pull registry.docker-cn.com/nvidia/cuda
+
+
+修改文件地址：/etc/docker/daemon.json
+{
+    "registry-mirrors": [
+        "https://registry.docker-cn.com","http://hub-mirror.c.163.com","https://docker.mirrors.ustc.edu.cn","https://docker.mirrors.ustc.edu.cn","https://kfwkfulq.mirror.aliyuncs.com","https://2lqq34jg.mirror.aliyuncs.com","https://pee6w651.mirror.aliyuncs.com"
+    ],
+    "insecure-registries": []
+}
