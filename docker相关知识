@@ -1,5 +1,8 @@
 docker是一种容器区别于虚拟机，使用docker你可以打包、发布、运行任何应用程序，如果你经常碰到开发环境与生产环境不一致，或者经常需要配置复杂的环境，
 那你就可以考虑使用它，“它是一处打包到处运行“。
+容器仅仅隔离应用程序，而其他资源是容器间共享的，虚拟机是一种完全霸占的状态（个人理解）。
+
+一个人把复杂的环境配置并打包成镜像，其他人就可以直接使用这个环境，而不需要做任何配置，保证生产环境一致。
 docker权限：
 sudo groupadd docker
 sudo gpasswd -a ${USER} docker
@@ -11,3 +14,8 @@ docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
 编写完成 Dockerfile 后可以使用 docker build 来生成镜像。sudo docker build -t="ouruser/sinatra:v2" .
 (其中 -t 标记来添加 tag，指定新的镜像的用户信息。“.” 是 Dockerfile 所在的路径（当前目录），也可以替换为一个具体的 Dockerfile 的路径。)
 docker image rm(删除镜像)
+
+相关操作：
+拉取镜像：sudo docker pull （nvidia/cuda:9.2-cudnn7-runtime-ubuntu16.04）
+查看拉取的镜像：sudo docker ps
+基于这个镜像启动容器：sudo nvidia-docker run -ti (nvidia/cuda:9.2-cudnn7-runtime-ubuntu16.04 bash)
