@@ -3,3 +3,9 @@ sudo groupadd docker
 sudo gpasswd -a ${USER} docker
 sudo service docker restart
 newgrp - docker
+
+
+docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
+编写完成 Dockerfile 后可以使用 docker build 来生成镜像。sudo docker build -t="ouruser/sinatra:v2" .
+(其中 -t 标记来添加 tag，指定新的镜像的用户信息。“.” 是 Dockerfile 所在的路径（当前目录），也可以替换为一个具体的 Dockerfile 的路径。)
+docker image rm(删除镜像)
