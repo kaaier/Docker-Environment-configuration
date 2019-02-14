@@ -83,3 +83,7 @@ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 # Test nvidia-smi 验证是否安装成功
 nvidia-docker run --rm nvidia/cuda nvidia-smi
 
+安装记录：无法进行测试
+1.设置中国官方镜像加速：https://www.docker-cn.com/registry-mirror
+2.下载nvidia cuda中的镜像
+docker pull registry.docker-cn.com/nvidia/cuda
