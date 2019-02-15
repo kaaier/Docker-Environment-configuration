@@ -96,3 +96,18 @@ docker pull registry.docker-cn.com/nvidia/cuda
     ],
     "insecure-registries": []
 }
+
+
+
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ef017c13.m.daocloud.io
+修改json配置（包括nvidia）
+{
+    "runtimes": {
+        "nvidia": {
+            "path": "/usr/bin/nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+    "registry-mirrors": ["http://ef017c13.m.daocloud.io"],
+    "insecure-registries": []
+}
