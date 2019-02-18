@@ -1,0 +1,17 @@
+
+
+docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+docker: Error response from daemon: Unknown runtime specified nvidia.
+See 'docker run --help'.
+报错信息：未进行注册，docker-engine-setup ，需要将新参数与现有配置进行合并。
+
+
+详情网址：
+中文blog：https://blog.csdn.net/weixin_32820767/article/details/80538510
+nvidiablog：https://github.com/nvidia/nvidia-container-runtime#docker-engine-setup
+
+
+
+Do not follow this section if you installed the nvidia-docker2 package, it already registers the runtime.
+To register the nvidia runtime, use the method below that is best suited to your environment.
+You might need to merge the new argument with your existing configuration.
