@@ -15,3 +15,9 @@ nvidiablog：https://github.com/nvidia/nvidia-container-runtime#docker-engine-se
 Do not follow this section if you installed the nvidia-docker2 package, it already registers the runtime.
 To register the nvidia runtime, use the method below that is best suited to your environment.
 You might need to merge the new argument with your existing configuration.
+
+
+
+安装Docker以及NVIDIA-Docker：
+http://www.runoob.com/docker/docker-run-command.html菜鸟
+https://blog.csdn.net/sinat_26917383/article/details/78728215
