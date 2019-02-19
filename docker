@@ -111,3 +111,16 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://ef017c13
     "registry-mirrors": ["http://ef017c13.m.daocloud.io"],
     "insecure-registries": []
 }
+
+
+
+
+
+
+
+
+registry.cn-hangzhou.aliyuncs.com  
+
+{
+  "registry-mirrors": ["https://uzmlukuz.mirror.aliyuncs.com","registry.cn-hangzhou.aliyuncs.com"]
+}
