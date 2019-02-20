@@ -1,0 +1,22 @@
+docker attach MLPlatformtest
+
+root@b14b46e939a1:/usr/local/lib/python3.6/dist-packages/MLPlatform/inference/Pytorch# python testdetectron.py 
+
+文件拷贝 
+docker cp /home/kaaier/miniconda3/lib/python3.6/site-packages/MLPlatform MLPlatformtest:/usr/local/lib/python3.6/dist-packages
+
+报错信息：
+Traceback (most recent call last):
+  File "testdetectron.py", line 1, in <module>
+    from MLPlatform.inference.Pytorch.inference import Detectron
+  File "/usr/local/lib/python3.6/dist-packages/MLPlatform/inference/Pytorch/inference.py", line 24, in <module>
+    import nn as mynn
+  File "/usr/local/lib/python3.6/dist-packages/MLPlatform/detect/Pytorch/Detectron/lib/nn/__init__.py", line 2, in <module>
+    from .parallel import DataParallel
+  File "/usr/local/lib/python3.6/dist-packages/MLPlatform/detect/Pytorch/Detectron/lib/nn/parallel/__init__.py", line 3, in <module>
+    from .data_parallel import DataParallel, data_parallel
+  File "/usr/local/lib/python3.6/dist-packages/MLPlatform/detect/Pytorch/Detectron/lib/nn/parallel/data_parallel.py", line 4, in <module>
+    from .scatter_gather import scatter_kwargs, gather
+  File "/usr/local/lib/python3.6/dist-packages/MLPlatform/detect/Pytorch/Detectron/lib/nn/parallel/scatter_gather.py", line 8, in <module>
+    from torch.utils.data.dataloader import numpy_type_map
+ImportError: cannot import name 'numpy_type_map'
