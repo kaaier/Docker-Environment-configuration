@@ -20,3 +20,6 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.6/dist-packages/MLPlatform/detect/Pytorch/Detectron/lib/nn/parallel/scatter_gather.py", line 8, in <module>
     from torch.utils.data.dataloader import numpy_type_map
 ImportError: cannot import name 'numpy_type_map'
+
+容器构建镜像
+docker commit  -a 'zhangxu' -m 'detectron' MLPplatformzx  detectron
